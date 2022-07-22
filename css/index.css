@@ -38,11 +38,76 @@
 body {
 	background-color: var(--black);
 }
-
+.footer__title {
+	color: #C8C8C8;
+	font-weight: var(--weight-title);
+	font-size: var(--size-text-xl);
+	display: flex;
+}
+.guides {
+	display: flex;
+	flex-flow: row wrap;
+	
+}
+.guides__item {
+	width: 48%;
+	color: #ACACAC;
+	font-size: var(--size-text-sm);
+	font-weight: var(--weight-text);
+}
+.address__title {
+	color: #ACACAC;
+	font-size: var(--spacing-md);
+	font-weight: var(--weight-title);
+}
+.address__item {
+	color: #919191;
+}
 /* 모바일 */
 @media (min-width: 320px) and (max-width: 768px) {
+	footer {
+		padding: 40px 20px;
+	}
+	.footer__title {
+		flex-flow: column nowrap;
+	}
+	.guides {
+		margin-top: 1.625rem;
+		gap: 0.625rem;
+	}
+	.language {
+		margin: 3.1875rem 0 1.875rem 0;
+	}
+	.address__title {
+		margin-bottom: 0.625rem;
+	}
+	.address__item {
+		font-size: var(--size-text-sm);
+		font-weight: var(--weight-text);
+	}
 }
 
 /* 데스크탑 */
 @media (min-width: 768px) {
+	footer {
+		padding: 50px 200px;
+	}
+	.guides {
+		margin-top: 3.125rem;
+		max-width: 62.437rem;
+		gap: var(--spacing-base);
+	}
+	.guides__item {
+		width: 23%;
+	}
+	.language {
+		margin: 2.875rem 0;
+	}
+	.address__title {
+		margin-bottom: var(--spacing-base);
+	}
+	.address__item {
+		font-size: var(--spacing-base);
+		font-weight: var(--weight-text-bold);
+	}
 }
