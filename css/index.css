@@ -20,6 +20,7 @@
 
 	/* 색깔 */
 	--red: #e50914;
+	--red-dark: #b70710;
 	--blue: #0071eb;
 	--green: #2ede75;
 	--black: #010101;
@@ -34,6 +35,20 @@
 	--spacing-lg: 1.5rem; /* 24px */
 	--spacing-xl: 2rem; /* 32px */
 }
+
+/* 숨김요소 */
+.sr-only,
+legend {
+	overflow: hidden;
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
 /* 공통 디바이스 */
 body {
 	background-color: var(--black);
@@ -51,7 +66,7 @@ body {
 .header__logoBox {
 	width: 5rem;
 }
-.select-languageBox {
+.language {
 	position: relative;
 	display: inline-block;
 	width: 7.062rem;
@@ -60,43 +75,40 @@ body {
 	color: var(--gray);
 	border: 1px solid var(--gray);
 	border-radius: 2px;
+	transition: all 200ms;
 }
-.select-languageBox::before,
-.select-languageBox::after {
-	content: '';
+.language:hover {
+	border-color: var(--white);
+}
+.language .iconBox {
 	position: absolute;
 	top: 50%;
-	background-color: green;
 	transform: translateY(-50%);
 }
-.select-languageBox::before {
+.icon-globe {
 	width: 1rem;
 	height: 1rem;
 	background: url('../assets/Icon/global.svg') no-repeat 0 0;
 	left: 0.625rem;
 }
-.select-languageBox::after {
+.icon-triangle {
 	width: 0.687rem;
 	height: 0.5rem;
 	background: url('../assets/Icon/triangle.svg') no-repeat 0 0;
 	right: 0.625rem;
 }
-.select-languageBox select {
+.language__select {
 	display: block;
 	width: 100%;
 	height: 100%;
-	appearance: none;
 	text-align: center;
 	color: var(--gray);
 	background: transparent;
 	border: 0;
+	appearance: none;
+	-webkit-appearance: none;
 }
-.select-languageBox option::before {
-	width: 1rem;
-	height: 1rem;
-	background: url('../assets/Icon/global.svg') no-repeat 0 0;
-	left: 0.625rem;
-}
+
 .header__login-link {
 	margin-left: var(--spacing-base);
 	width: 3.75rem;
@@ -108,6 +120,10 @@ body {
 	padding: var(--spacing-xs) var(--spacing-sm);
 	white-space: nowrap;
 	border-radius: 2px;
+	transition: all 200ms;
+}
+.header__login-link:hover {
+	background-color: var(--red-dark);
 }
 
 /* 모바일 */
@@ -122,7 +138,7 @@ body {
 	.header__logoBox {
 		width: 8.75rem;
 	}
-	.select-languageBox {
+	.language {
 		width: 7.062rem;
 		height: 2.5rem;
 	}
