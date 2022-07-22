@@ -34,3 +34,51 @@
 	--spacing-lg: 1.5rem; /* 24px */
 	--spacing-xl: 2rem; /* 32px */
 }
+/* 공통 디바이스 */
+body {
+	background-color: var(--black);
+}
+
+/* 공통 서비스 영역 */
+.sr-only{
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.service{
+	color: var(--white);
+	padding: 20px 18px;
+}
+
+/* 모바일 */
+@media (min-width: 320px) and (max-width: 768px) {
+	/* 모바일 서비스 영역 */
+	.service{
+		text-align: center;
+		word-break: keep-all;
+	}
+
+	.title{
+		font-weight: var(--weight-title);
+		font-size: var(--size-title-sm);
+		margin-top: 60px;
+		margin-bottom: 30px;
+	}
+
+	.info{
+		font-weight: var(--weight-text);
+		font-size: var(--size-text-md);
+		line-height: var(--spacing-lg);
+		margin-bottom: 10px;
+	}
+}
+
+/* 데스크탑 */
+@media (min-width: 768px) {
+	/* 데스크탑 서비스 영역 */
+}
