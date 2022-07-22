@@ -39,7 +39,7 @@ body {
 	background-color: var(--black);
 }
 footer {
-	border-top: 4px solid #2F2F2F;
+	border-top: 0.25rem solid #2F2F2F;
 }
 .footer__title {
 	color: #C8C8C8;
@@ -69,7 +69,7 @@ footer {
 /* 모바일 */
 @media (min-width: 320px) and (max-width: 768px) {
 	footer {
-		padding: 40px 20px;
+		padding: 2.5rem var(--spacing-md);
 	}
 	.footer__title {
 		flex-flow: column nowrap;
@@ -92,7 +92,7 @@ footer {
 /* 데스크탑 */
 @media (min-width: 768px) {
 	footer {
-		padding: 50px 200px;
+		padding: 3.125rem 12.5rem;
 	}
 	.guides {
 		margin-top: 3.125rem;
