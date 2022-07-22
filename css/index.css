@@ -1,17 +1,17 @@
 :root {
 	/* 폰트 사이즈 */
-	--size-title-xs: 1.375rem;
-	--size-title-sm: 1.5rem;
-	--size-title-md: 1.75rem;
-	--size-title-lg: 2.125rem;
-	--size-title-xl: 3rem;
-	--size-title-xxl: 3.75rem;
+	--size-title-xs: 1.375rem; /* 22px */
+	--size-title-sm: 1.5rem; /* 24px */
+	--size-title-md: 1.75rem; /* 28px */
+	--size-title-lg: 2.125rem; /* 34px */
+	--size-title-xl: 3rem; /* 48px */
+	--size-title-xxl: 3.75rem; /* 60px */
 
-	--size-text-xs: 0.75rem;
-	--size-text-sm: 0.875rem;
-	--size-text-md: 1rem;
-	--size-text-lg: 1.125rem;
-	--size-text-xl: 1.25rem;
+	--size-text-xs: 0.75rem; /* 12px */
+	--size-text-sm: 0.875rem; /* 14px */
+	--size-text-md: 1rem; /* 16px */
+	--size-text-lg: 1.125rem; /* 18px */
+	--size-text-xl: 1.25rem; /* 20px */
 
 	/* 폰트 굵기 */
 	--weight-title: 700;
@@ -20,6 +20,7 @@
 
 	/* 색깔 */
 	--red: #e50914;
+	--red-dark: #b70710;
 	--blue: #0071eb;
 	--green: #2ede75;
 	--black: #010101;
@@ -35,6 +36,15 @@
 	--spacing-xl: 2rem; /* 32px */
 }
 
+/* 공통 폰트 색상 */
+.white{
+	color: var(--white);
+}
+
+.gray{
+	color: var(--gray);
+}
+
 /* 숨김 콘텐츠 */
 .sr-only, legend{
   position: absolute;
@@ -45,7 +55,6 @@
   clip: rect(0, 0, 0, 0);
   clip-path: polygon(0 0, 0 0, 0 0);
 }
-
 
 /* 공통 디바이스 */
 body {
@@ -99,17 +108,85 @@ body {
 	border: 0;
 }
 
-/* 공통 폰트 색상 */
-.white{
-	color: var(--white);
+/* 헤더 공통 */
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: var(--spacing-lg);
+}
+.header__logoBox {
+	width: 5rem;
+}
+.language {
+	position: relative;
+	display: inline-block;
+	width: 7.062rem;
+	height: 1.875rem;
+	margin-left: auto;
+	color: var(--gray);
+	border: 1px solid var(--gray);
+	border-radius: 2px;
+	transition: all 200ms;
+}
+.language:hover {
+	border-color: var(--white);
+}
+.language .iconBox {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.icon-globe {
+	width: 1rem;
+	height: 1rem;
+	background: url('../assets/Icon/global.svg') no-repeat 0 0;
+	left: 0.625rem;
+}
+.icon-triangle {
+	width: 0.687rem;
+	height: 0.5rem;
+	background: url('../assets/Icon/triangle.svg') no-repeat 0 0;
+	right: 0.625rem;
+}
+.language__select {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: var(--gray);
+	background: transparent;
+	border: 0;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
-.gray{
-	color: var(--gray);
+.header__login-link {
+	margin-left: var(--spacing-base);
+	width: 3.75rem;
+	height: 1.875rem;
+	color: var(--white);
+	background-color: var(--red);
+	font-size: var(--size-text-xs);
+	font-weight: var(--weight-text-bold);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	white-space: nowrap;
+	border-radius: 2px;
+	transition: all 200ms;
+}
+.header__login-link:hover {
+	background-color: var(--red-dark);
 }
 
 /* 모바일 */
+
 @media (min-width: 320px) and (max-width: 949px) {
+  /* 모바일 헤더 */
+  .header {
+		background: url('../assets/images/hero-bg-mobile.png') no-repeat 0 0;
+	}
 	
 	/* 모바일 멤버십 영역 */
 	.registerMember{
@@ -163,11 +240,23 @@ body {
 		padding: 10px 20px 10px 0;
 		border-radius: 30px;
 		background-position: right 12px bottom 50%;
-	}
-}
 
 /* 데스크탑 */
+
 @media (min-width: 950px) {
+  /* 데스크탑 헤더 */
+  .header__logoBox {
+		width: 8.75rem;
+	}
+	.language {
+		width: 7.062rem;
+		height: 2.5rem;
+	}
+	.header__login-link {
+		width: 4.375rem;
+		height: 2.5rem;
+		font-size: var(--size-text-md);
+	}
 
 	/* 데스크탑 멤버십 영역 */
 	.registerMember{
