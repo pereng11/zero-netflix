@@ -4,13 +4,35 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/index.css" />
 		<title>넷플릭스 홈</title>
 	</head>
 	<body>
-		<header></header>
+		<header class="header">
+			<h1 class="header__logoBox">
+				<img src="./assets/images/logo.svg" alt="넷플릭스 로고 이미지" />
+			</h1>
+			<div class="language">
+				<label for="languageSelect" class="sr-only">언어 선택</label>
+				<div class="iconBox icon-globe" aria-hidden="true"></div>
+				<select name="language" id="languageSelect" class="language__select">
+					<option value="한국어" selected>한국어</option>
+					<option value="english">English</option>
+				</select>
+				<div class="iconBox icon-triangle" aria-hidden="true"></div>
+			</div>
+			<a href="/" class="header__login-link" title="로그인 화면으로 이동"
+				>로그인</a
+			>
+		</header>
+
 		<main>
 			<section class="section1"></section>
 			<section class="section2"></section>

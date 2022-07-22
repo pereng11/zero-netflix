@@ -1,17 +1,17 @@
 :root {
 	/* 폰트 사이즈 */
-	--size-title-xs: 1.375rem;
-	--size-title-sm: 1.5rem;
-	--size-title-md: 1.75rem;
-	--size-title-lg: 2.125rem;
-	--size-title-xl: 3rem;
-	--size-title-xxl: 3.75rem;
+	--size-title-xs: 1.375rem; /* 22px */
+	--size-title-sm: 1.5rem; /* 24px */
+	--size-title-md: 1.75rem; /* 28px */
+	--size-title-lg: 2.125rem; /* 34px */
+	--size-title-xl: 3rem; /* 48px */
+	--size-title-xxl: 3.75rem; /* 60px */
 
-	--size-text-xs: 0.75rem;
-	--size-text-sm: 0.875rem;
-	--size-text-md: 1rem;
-	--size-text-lg: 1.125rem;
-	--size-text-xl: 1.25rem;
+	--size-text-xs: 0.75rem; /* 12px */
+	--size-text-sm: 0.875rem; /* 14px */
+	--size-text-md: 1rem; /* 16px */
+	--size-text-lg: 1.125rem; /* 18px */
+	--size-text-xl: 1.25rem; /* 20px */
 
 	/* 폰트 굵기 */
 	--weight-title: 700;
@@ -20,6 +20,7 @@
 
 	/* 색깔 */
 	--red: #e50914;
+	--red-dark: #b70710;
 	--blue: #0071eb;
 	--green: #2ede75;
 	--black: #010101;
@@ -34,15 +35,116 @@
 	--spacing-lg: 1.5rem; /* 24px */
 	--spacing-xl: 2rem; /* 32px */
 }
+
+/* 숨김요소 */
+.sr-only,
+legend {
+	overflow: hidden;
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
 /* 공통 디바이스 */
 body {
 	background-color: var(--black);
 }
 
+/* 헤더 공통 */
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: var(--spacing-lg);
+}
+.header__logoBox {
+	width: 5rem;
+}
+.language {
+	position: relative;
+	display: inline-block;
+	width: 7.062rem;
+	height: 1.875rem;
+	margin-left: auto;
+	color: var(--gray);
+	border: 1px solid var(--gray);
+	border-radius: 2px;
+	transition: all 200ms;
+}
+.language:hover {
+	border-color: var(--white);
+}
+.language .iconBox {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.icon-globe {
+	width: 1rem;
+	height: 1rem;
+	background: url('../assets/Icon/global.svg') no-repeat 0 0;
+	left: 0.625rem;
+}
+.icon-triangle {
+	width: 0.687rem;
+	height: 0.5rem;
+	background: url('../assets/Icon/triangle.svg') no-repeat 0 0;
+	right: 0.625rem;
+}
+.language__select {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: var(--gray);
+	background: transparent;
+	border: 0;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.header__login-link {
+	margin-left: var(--spacing-base);
+	width: 3.75rem;
+	height: 1.875rem;
+	color: var(--white);
+	background-color: var(--red);
+	font-size: var(--size-text-xs);
+	font-weight: var(--weight-text-bold);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	white-space: nowrap;
+	border-radius: 2px;
+	transition: all 200ms;
+}
+.header__login-link:hover {
+	background-color: var(--red-dark);
+}
+
 /* 모바일 */
 @media (min-width: 320px) and (max-width: 768px) {
+	.header {
+		background: url('../assets/images/hero-bg-mobile.png') no-repeat 0 0;
+	}
 }
 
 /* 데스크탑 */
 @media (min-width: 768px) {
+	.header__logoBox {
+		width: 8.75rem;
+	}
+	.language {
+		width: 7.062rem;
+		height: 2.5rem;
+	}
+	.header__login-link {
+		width: 4.375rem;
+		height: 2.5rem;
+		font-size: var(--size-text-md);
+	}
 }
