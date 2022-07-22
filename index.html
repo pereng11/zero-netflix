@@ -4,17 +4,56 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/index.css" />
 		<title>넷플릭스 홈</title>
 	</head>
 	<body>
-		<header></header>
+		<header class="header">
+			<h1 class="header__logoBox">
+				<img src="./assets/images/logo.svg" alt="넷플릭스 로고 이미지" />
+			</h1>
+			<div class="language">
+				<label for="languageSelect" class="sr-only">언어 선택</label>
+				<div class="iconBox icon-globe" aria-hidden="true"></div>
+				<select name="language" id="languageSelect" class="language__select">
+					<option value="한국어" selected>한국어</option>
+					<option value="english">English</option>
+				</select>
+				<div class="iconBox icon-triangle" aria-hidden="true"></div>
+			</div>
+			<a href="/" class="header__login-link" title="로그인 화면으로 이동"
+				>로그인</a
+			>
+		</header>
+
 		<main>
-			<section class="section1">
-				
+			<section class="white registerMember">
+				<h2 class="registerMember-title sr-only">넷플릭스 멤버십 가입 및 신규 회원 30일 무료이용 프로모션 안내</h2>
+				<p class="brief brief1"><span>영화, TV 프로그램을</span><span>무제한으로.</span></p>
+				<p class="brief brief2">다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</p>
+				<p class="brief brief3">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+				<p class="brief brief4">신규 회원만 이 프로모션을 이용하실 수 있습니다.</p>
+				<form action="/" method="post">
+					<fieldset>
+						<div class="user-email-wrapper">
+							<legend>멤버십 등록 폼</legend>
+							<div class="user-email">
+								<label for="userEmail" class="sr-only">이메일</label>
+								<input type="email" id="userEmail" class="gray" required="required" placeholder="newcode@zerobase.com" />
+							</div>
+							<button type="submit" class="login-button">30일 무료 이용</button>
+						</div>
+          </fieldset>
+				</form>
 			</section>
+      
 			<section class="section2">
 				<h2 class="sr-only">다양한 서비스 제공</h2>
 				<div class="service service__tv">
@@ -47,13 +86,7 @@
 						<img src="./assets/images/media-frame.png" alt="다양한 기기에서 보여지는 화면" class="service__variousDevice" />
 					</figure>
 				</div>
-			</section>
-			<section class="section3">
-
-			</section>
-			<section class="section4">
-
-			</section>
+      </section>
 		</main>
 		<footer></footer>
 	</body>
