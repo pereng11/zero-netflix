@@ -96,8 +96,8 @@ body {
 	}
 
 	.frame{
-		width: 339px;
-		height: 255px;
+		width: 21.187rem;
+		height: 15.937rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -113,52 +113,31 @@ body {
 	/* 데스크탑 서비스 영역 */
 	.service{
 		word-break: keep-all;
-		padding: 60px 64px 60px 66px;
+		padding: 3.75rem 12.0625rem 3.75rem 12.1875rem;
 		display: flex;
 		flex-flow: row;
+		flex-basis: content;
 		justify-content: space-between;
-		/* min-width: 1200px; */
 	}
 
 	.serviceInfo__container{
 		display: flex;
 		flex-flow: column nowrap;
-		gap: 20px;
-		margin-top: 83px;
+		gap: var(--spacing-md);
+		margin-top: 5.187rem;
+		width: 50%;
 	}
 
 	.title{
 		font-weight: var(--weight-title);
 		font-size: var(--size-title-xl);
 	}
-		
-	.title__save{
-		width: 580px;
-	}
-		
-	.title__watch{
-		width: 450px;
-	}
 
 	.info{
 		font-weight: var(--weight-text);
 		font-size: var(--size-text-md);
 		line-height: var(--spacing-lg);
-		width: 393px;
-	}
-
-	.info__tv{
-		width: 350px;
-	}
-
-	.frame{
-		width: 30rem;
-		height: 22.5rem;
-	}
-
-	.frame img{
-		width: 100%;
-		height: 100%;
+		width: 24.562rem;
 	}
 
 	.service__contentSaveFrame{
