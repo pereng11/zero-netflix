@@ -217,6 +217,10 @@ footer {
 	border-bottom: 4px solid #2f2f2f;
 }
 
+.service:last-child{
+	border-bottom: none;
+}
+
 .info span{
 	display: block;
 }
@@ -309,7 +313,7 @@ footer {
 
 	.info{
 		font-weight: var(--weight-text);
-		font-size: var(--size-text-xl);
+		font-size: var(--size-text-md);
 		line-height: 1.875rem;
 	}
 
@@ -347,6 +351,7 @@ footer {
 	.address__item {
 		font-size: var(--size-text-sm);
 		font-weight: var(--weight-text);
+}
 }
 
 
@@ -463,5 +468,4 @@ footer {
 		font-size: var(--spacing-base);
 		font-weight: var(--weight-text-bold);
 	}  
-
 }
